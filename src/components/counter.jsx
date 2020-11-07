@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 
 class Counter extends Component {
+  constructor() {
+    super();
+    this.handleIncrement = this.handleIncrement.bind(this);
+  }
+
   state = {
     count: 0,
   };
@@ -31,7 +36,7 @@ class Counter extends Component {
   }
 
   handleIncrement() {
-    console.log("Increment clicked!");
+    console.log("Increment clicked!", this);
   }
 }
 
